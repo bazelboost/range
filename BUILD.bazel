@@ -1,0 +1,29 @@
+
+cc_library(
+	name = "range",
+	visibility = ["//visibility:public"],
+	includes = [
+		"include/",
+	],
+	hdrs = glob([
+		"include/boost/**/*.hpp",
+		"include/boost/**/*.ipp",
+	]),
+	srcs = [
+	],
+	defines = [
+	],
+	deps = [
+		"@com_github_bazelboost_config//:config",
+		"@com_github_bazelboost_tuple//:tuple",
+		"@com_github_bazelboost_regex//:regex",
+		"@com_github_bazelboost_concept_check//:concept_check",
+		"@com_github_bazelboost_assert//:assert",
+		"@com_github_bazelboost_mpl//:mpl",
+		"@com_github_bazelboost_detail//:detail",
+		"@com_github_bazelboost_array//:array",
+		"@com_github_bazelboost_type_traits//:type_traits",
+		"@com_github_bazelboost_optional//:optional",
+		"@com_github_bazelboost_iterator//:iterator"
+	],
+)
